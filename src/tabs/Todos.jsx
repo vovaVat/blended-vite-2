@@ -12,11 +12,6 @@ const Todos = () => {
   return (
     <div>
       <Form onSubmit={handleAddTodo} />
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.text}</li>
-        ))}
-      </ul>
     </div>
   );
 };
