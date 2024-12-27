@@ -1,7 +1,38 @@
 // import { FiSearch } from 'react-icons/fi';
 
-const Form = () => {
-  return <h2>Form</h2>;
+import { useState } from "react";
+
+const Form = ({onSubmit}) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (inputValue.trim()) {
+      onSubmit(inputValue);
+      setInputValue('');
+    }
+  };
+
+  return (
+    <form className={style.form} onSubmit={handleSubmit}>
+      <button className={style.button} type="submit">
+        Add
+      </button>
+      <input
+        className={style.input}
+        placeholder="What do you want to write?"
+        name="search"
+        required
+        autoFocus
+        value={inputValue}
+        onChange={handleChange}
+      />
+    </form>
+  );
 };
 
 export default Form;
