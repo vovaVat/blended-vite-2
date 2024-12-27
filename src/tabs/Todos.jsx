@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Text from '../components/Text/Text';
+import TodoList from '../components/TodoList/TodoList';
 
 const Todos = () => {
   const [todos, setTodos]= useState([]);
@@ -12,6 +13,7 @@ const Todos = () => {
   return (
     <div>
       <Form onSubmit={handleAddTodo} />
+      <TodoList />
     </div>
   );
 };

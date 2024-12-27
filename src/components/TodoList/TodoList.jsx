@@ -1,5 +1,13 @@
 const TodoList = () => {
-  return <h3>TodoList</h3>;
+  return (
+    <Grid>
+  {array.map(() => (
+    <GridItem>
+      <TodoListItem />
+    </GridItem>
+  ))}
+</Grid>
+  );
 };
 
 export default TodoList;
