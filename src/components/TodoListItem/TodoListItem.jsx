@@ -1,8 +1,11 @@
-const TodoListItem = () => {
+import Text from "../Text/Text"
+import style from "./TodoListItem.module.css"
+
+const TodoListItem = ({text}) => {
   return (
     <div className={style.box}>
       <Text textAlign="center" marginBottom="20">
-        TODO #1
+        {text}
       </Text>
       <Text>Some description</Text>
       <button className={style.deleteButton} type="button">

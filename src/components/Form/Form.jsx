@@ -1,6 +1,7 @@
 // import { FiSearch } from 'react-icons/fi';
 
 import { useState } from "react";
+import style from "./Form.module.css"
 
 const Form = ({onSubmit}) => {
   const [inputValue, setInputValue] = useState('');

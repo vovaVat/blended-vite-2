@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Text from '../components/Text/Text';
 import TodoList from '../components/TodoList/TodoList';
+import { nanoid } from 'nanoid'
+import Form from '../components/Form/Form';
 
 const Todos = () => {
   const [todos, setTodos]= useState([]);
@@ -12,8 +14,9 @@ const Todos = () => {
 
   return (
     <div>
+      <Text>no elements</Text>
       <Form onSubmit={handleAddTodo} />
-      <TodoList />
+      <TodoList todos={todos}/>
     </div>
   );
 };
